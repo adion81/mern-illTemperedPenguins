@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ill Tempered Penguins</title>
+</head>
+<body>
+    <h1>Ill Tempered Penguins</h1>
+    <button id="reset">Reset</button>
+    <div id="penguins">
+        <img src="./img/slider.jpeg" alt="Slider" id="0">
+        <img src="./img/babyFace.jpeg" alt="Baby Face" id="1">
+        <img src="./img/happy.png" alt="Happy" id="2">
+        <img src="./img/smiles.jpeg" alt="Smiles" id="3">
+    </div>
+    <p id="info"></p>
+</body>
+<script>
+    var infoArr = [
+        "This is Slider. He likes to come at you sliding on his belly, and though he may seem cute, you will want to stay away from him.",
+        "This is Baby Face. Once the ridicule of the Waddle, he is our for revenge in the most ill-tempered way.",
+        "This is Happy.  He may look like an imaginary and drawn penguin, but he is as real and ill-tempered as the rest of them.",
+        "This is Smiles.  Even though he looks creepy, he's actually really nice!  He wants to be everyone's friend."
+    ]
+
+    document.getElementById("0").onclick = function(){
+        getInfo(0);
+    };
+    document.getElementById("1").onclick = function(){
+        getInfo(1);
+    };
+    document.getElementById("2").onclick = function(){
+        getInfo(2);
+    };
+    document.getElementById("3").onclick = function(){
+        getInfo(3);
+    };
+    function getInfo(idx){
+        document.getElementById("info").innerText = infoArr[idx];
+    }
+</script>
+</html>
