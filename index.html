@@ -37,16 +37,25 @@
         "This is Baby Face. Once the ridicule of the Waddle, he is out for revenge in the most ill-tempered way.",
         "This is Happy.  He may look like an imaginary and drawn penguin, but he is as real and ill-tempered as the rest of them.",
         "This is Smiles.  Even though he looks creepy, he's actually really nice!  He wants to be everyone's friend."
-    ]
+    ];
 
-    document.getElementById("0").onclick = () => getInfo(0);
-    document.getElementById("1").onclick = () => getInfo(1);
-    document.getElementById("2").onclick = function(){
-        getInfo(2);
-    };
-    document.getElementById("3").onclick = function(){
-        getInfo(3);
-    };
+    // document.getElementById("0").onclick = () => getInfo(0);
+    // document.getElementById("1").onclick = () => getInfo(1);
+    // document.getElementById("2").onclick = function(){
+    //     getInfo(2);
+    // };
+    // document.getElementById("3").onclick = function(){
+    //     getInfo(3);
+    // };
+
+    // var element = document.getElementById('penguins').getElementsByTagName('img')[0];
+
+    [...document.getElementById('penguins').getElementsByTagName('img')].forEach(img => {
+        img.addEventListener('click', () => getInfo(img.id) 
+        );
+    });
+
+
 
     document.getElementById("reset").onclick = () => document.getElementById("info").innerText = "";
     document.getElementById("title").addEventListener("mouseenter",() => {
